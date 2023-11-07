@@ -31,6 +31,7 @@ export default function MissionEditForm({missionId, setMissionId}) {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
+                    'Accept': 'application/json',
                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
                 },
                 body: JSON.stringify(mission)
