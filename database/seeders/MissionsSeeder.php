@@ -119,6 +119,7 @@ class MissionsSeeder extends Seeder
         foreach ($missions as $key => $mission) {
             $new_mission = new Mission;
             $new_mission->fill($mission);
+            // $new_mission->name = $mission['name'];
             $new_mission->save();
         }
     }
