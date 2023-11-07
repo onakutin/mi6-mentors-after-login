@@ -30,12 +30,15 @@ export default function MissionEditForm({missionId, setMissionId}) {
             mission ? 
             <div className="missions-list__form-container">
                 <form action="" onSubmit={sendData}>
+                    <label>Name:</label>
                     <input type="text" name="name" value={mission.name} className="missions-list__form-input"/>
+                    <label>Year:</label>
                     <input type="number" name="year" value={mission.year} className="missions-list__form-input"/>
+                    <label>Outcome:</label>
                     <select name="outcome" className="missions-list__form-input">
                         <option value={null} selected={mission.outcome === null}>Unknown</option>
-                        <option value={true} selected={mission.outcome === true}>Successful</option>
-                        <option value={false} selected={mission.outcome === false}>Failure</option>
+                        <option value={true} selected={mission.outcome == true}>Successful</option>
+                        <option value={false} selected={mission.outcome == false}>Failure</option>
                     </select>
                     <button type="submit">Update</button>
                 </form>

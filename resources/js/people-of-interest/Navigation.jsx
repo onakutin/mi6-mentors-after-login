@@ -8,9 +8,9 @@ export default function Navigation({content, setContent}) {
       <img src="/images/mi6-seal.png" alt="seal" className="sidenav__image" />
       <ul className="sidenav__links">
         {/* Will be replaced by links from react router: */}
-        <li className={"sidenav__link" + (content === '' ? ' sidenav__link_active' : '')}  onClick={()=>setContent('')}><a href="#">Home</a></li>
-        <li className={"sidenav__link" + (content === 'people-of-interest' ? ' sidenav__link_active' : '')} onClick={()=>setContent('people-of-interest')}><a href="#">People of interest</a></li>
-        <li className={"sidenav__link" + (content === 'missions' ? ' sidenav__link_active' : '')} onClick={()=>setContent('missions')}><a href="#">Missions</a></li>
+        <li className={"sidenav__link" + (content === '' ? ' sidenav__link_active' : '')}  onClick={()=>setContent('')}>Home</li>
+        <li className={"sidenav__link" + (content === 'people-of-interest' ? ' sidenav__link_active' : '')} onClick={()=>setContent('people-of-interest')}>People of interest</li>
+        <li className={"sidenav__link" + (content === 'missions' ? ' sidenav__link_active' : '')} onClick={()=>setContent('missions')}>Missions</li>
       </ul>
     </div>
     <span className={"sidenav__arrow" + (navClosed ? " sidenav__arrow_closed" : "")} onClick={()=>setNavClosed(!navClosed)}></span>
