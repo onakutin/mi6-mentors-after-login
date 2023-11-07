@@ -4,6 +4,7 @@
         <title>Laravel + React</title>
         <!-- Styles -->
         @vite(['resources/css/app.scss'])
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
 

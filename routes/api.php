@@ -26,3 +26,4 @@ Route::get('/people/{person_id}', [PersonController::class, 'show']);
 Route::get('/statuses', [StatusController::class, 'index']);
 Route::get('/missions', [MissionController::class, 'index']);
 Route::get('/missions/{mission_id}', [MissionController::class, 'show']);
+Route::post('/missions/{mission_id}/store', [MissionController::class, 'store']);
