@@ -25,7 +25,7 @@ class MissionController extends Controller
     public function store(Request $request, $mission_id)
     {
         $request->validate([
-            'name' => 'required|unique:missions',
+            'name' => 'required',
             'year' => 'required',
         ]);
 
