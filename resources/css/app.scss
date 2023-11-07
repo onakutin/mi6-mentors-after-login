@@ -156,6 +156,21 @@ main {
     }
 }
 
+.status-filter {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    &__status{
+        font-size: 0.75rem;
+        padding: 0.5rem;
+
+        &_selected {
+            background-color: #2B5554;
+        }
+    }
+}
+
 // global button style
 button {
     width: fit-content;
@@ -170,3 +185,4 @@ button {
         background-color: #2B5554;
     }
 }
+
