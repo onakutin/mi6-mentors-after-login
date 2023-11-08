@@ -55,6 +55,7 @@ body {
         margin: 0;
         cursor: pointer;
         color: white;
+        display: flex;
 
         &_active {
             background-color: #2B5554;
@@ -62,6 +63,12 @@ body {
 
         &:hover {
             background-color: #2B5554;
+        }
+
+        a {
+            flex-grow: 1;
+            text-decoration: none;
+            color: inherit;
         }
     }
 
@@ -148,7 +155,7 @@ main {
         background-color: #1638388a;
         border-radius: 0.5rem ;
         padding: 2rem;
-        
+
         img {
             align-self: center;
         }
