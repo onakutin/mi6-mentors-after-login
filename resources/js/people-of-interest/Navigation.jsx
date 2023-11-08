@@ -48,15 +48,27 @@ export default function Navigation({content, setContent}) {
                   <Link to="/login">Log in</Link>
                 </li>
               </>
-             : <li>
-              <button onClick={ handleLogout }>Logout</button>
-             </li>
+             : (user === null
+                ? <li>Loading user...</li>
+                : <li>
+                  <button onClick={ handleLogout }>Logout</button>
+                </li>
+             )
         }
         {/* <li className={"sidenav__link" + (content === '' ? ' sidenav__link_active' : '')}  onClick={()=>setContent('')}>Home</li>
         <li className={"sidenav__link" + (content === 'people-of-interest' ? ' sidenav__link_active' : '')} onClick={()=>setContent('people-of-interest')}>People of interest</li>
         <li className={"sidenav__link" + (content === 'missions' ? ' sidenav__link_active' : '')} onClick={()=>setContent('missions')}>Missions</li> */}
       </ul>
+
+
     </div>
+    {
+        user
+          ? <div className="sidenav__user-info">
+            Logged in as { user.name }
+          </div>
+          : ''
+    }
     <span className={"sidenav__arrow" + (navClosed ? " sidenav__arrow_closed" : "")} onClick={()=>setNavClosed(!navClosed)}></span>
   </nav>
 }

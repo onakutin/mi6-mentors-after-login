@@ -29,6 +29,8 @@ body {
     font-family: 'Cutive Mono', monospace;
     font-size: 1.4rem;
     transition: width 1s;
+    display: flex;
+    flex-direction: column;
 
     &__content {
         display: flex;
@@ -70,6 +72,13 @@ body {
             text-decoration: none;
             color: inherit;
         }
+    }
+
+    &__user-info {
+        margin-top: auto;
+        padding: 0.5rem;
+        font-size: 0.75em;
+        text-align: center;
     }
 
     &__arrow {
